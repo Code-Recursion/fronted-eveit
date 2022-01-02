@@ -1,22 +1,18 @@
-.App {
+body {
+  background-image: linear-gradient(45deg, lightblue, blue, violet, pink);
+  background-size: 450%;
+  animation: bganimation 15s infinite;
+}
+.Main {
   text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,15 +20,69 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.login {
+  padding: 4rem;
+  border-radius: 0.4rem;
+  background: #fff;
+  width: 18rem;
+  height: 30rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.input-elem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #fff;
+}
+input:focus {
+  outline: none !important;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #1ec9cf 0%,
+    #f162de 51%,
+    #4776e6 100%
+  );
+}
+.btn-grad {
+  padding: 8px 35px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  border: 0;
+  color: white;
+  width: 100%;
+  /* box-shadow: 0 0 20px #eee; */
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
